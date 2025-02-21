@@ -28,9 +28,9 @@ workflow = rw.workflows.Estimator()
 # Define scoring metrics
 # -----------------------
 score_types = [
-    rw.score_types.MAE(name='mae', precision=4),  # Mean Absolute Error
     rw.score_types.RMSE(name='rmse', precision=4)  # Root Mean Squared Error
 ]
+
 
 # -----------------------
 # Cross-validation strategy
