@@ -12,7 +12,7 @@ problem_title = 'Satellite decay date prediction'
 # Define target variable and ignored columns
 # -----------------------
 _target_column_name = 'DECAY_DATE'  # Target variable to predict (date of decay)
-_ignore_column_names = ['OBJECT_ID', 'OBJECT_NAME', 'NORAD_CAT_ID', 'TLE_LINE0', 'TLE_LINE1', 'TLE_LINE2']  # Identifiers and non-structured features
+# _ignore_column_names = ['OBJECT_ID', 'OBJECT_NAME', 'NORAD_CAT_ID', 'TLE_LINE0', 'TLE_LINE1', 'TLE_LINE2']  # Identifiers and non-structured features
 
 # -----------------------
 # Define prediction type (Regression)
@@ -54,8 +54,8 @@ def _read_data(path, filename):
     # Extract target variable (convert DECAY_DATE to number of days since launch)
     y_array = (df['DECAY_DATE'] - df['LAUNCH_DATE']).dt.days.values
     
-    # Drop unused columns
-    X_df = df.drop(columns=[_target_column_name] + _ignore_column_names)
+    # Garde toutes les colonnes, y compris LAUNCH_DATE
+    X_df = df.drop(columns=[_target_column_name])
     
     # Handle missing values in target
     valid_idx = ~pd.isna(y_array)
