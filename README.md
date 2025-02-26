@@ -1,7 +1,5 @@
 # RAMP starting kit on satellite decay date prediction
 
-[![Build Status](https://travis-ci.org/ramp-kits/satellite_decay.svg?branch=master)](https://travis-ci.org/ramp-kits/satellite_decay)
-
 Artificial satellites in Earth's orbit do not remain operational indefinitely. Over time, gravitational pull, atmospheric drag, and other factors alter their trajectory, eventually leading to their decay (disintegration). Predicting when a satellite will decay is a critical challenge for managing space traffic, avoiding collisions, and ensuring the safety of orbital infrastructure.
 
 The goal of this RAMP challenge is to design an algorithm that accurately predicts the decay date of satellites using their orbital parameters.
