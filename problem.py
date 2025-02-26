@@ -12,7 +12,7 @@ problem_title = 'Satellite decay date prediction'
 # Define target variable and ignored columns
 # -----------------------
 _target_column_name = 'DECAY_DATE'  # Target variable to predict (date of decay)
-_ignore_column_names = ['OBJECT_ID', 'OBJECT_NAME', 'NORAD_CAT_ID', 'LAUNCH_DATE', 'TLE_LINE0', 'TLE_LINE1', 'TLE_LINE2']  # Identifiers and non-structured features
+_ignore_column_names = ['OBJECT_ID', 'OBJECT_NAME', 'NORAD_CAT_ID', 'TLE_LINE0', 'TLE_LINE1', 'TLE_LINE2']  # Identifiers and non-structured features
 
 # -----------------------
 # Define prediction type (Regression)
